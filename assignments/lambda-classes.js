@@ -91,7 +91,7 @@ class Student extends Person {
   }
 }
 
-const Luis = new Student({
+const student001 = new Student({
 
   name: 'Luis',
   location: 'NYC',
@@ -121,7 +121,7 @@ class ProjectManagers extends Instructor {
     this.favInstructor = object.favInstructor;
   }
 
-  standUp() {
+  standUp(channel) {
 
     return `${this.name} announces to channel, @channel standup times!`;
 
@@ -129,7 +129,7 @@ class ProjectManagers extends Instructor {
 
   debugsCode(Student, subject) {
 
-    return `${this.name} debugs ${Student.name} code on ${subject}`;
+    return `${this.name} debugs ${Student.name}'s code on ${subject}`;
 
   }
 }
@@ -147,7 +147,7 @@ const Donald = new ProjectManagers({
 
 const Barack = new ProjectManagers({
 
-  name: 'Barack O',
+  name: 'Barack, O',
   location: 'Washington',
   age: 58,
   favLanguage: 'teleprompter',
@@ -156,6 +156,4 @@ const Barack = new ProjectManagers({
 
 })
 
-
-console.log(Barack.debugsCode());
 
